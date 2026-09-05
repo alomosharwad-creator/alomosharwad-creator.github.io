@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AegisTwin-Vision — Enterprise Autonomous Digital Twin & Edge AI Platform</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-[#070a11] text-gray-100 min-h-screen flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Top Enterprise Bar -->
+  <header class="border-b border-gray-800/80 bg-[#0c101c]/90 backdrop-blur-md px-6 py-3.5 flex flex-wrap items-center justify-between gap-4 sticky top-0 z-40">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-mono font-bold text-base shadow-inner">
+        AT
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-base font-semibold text-white tracking-tight">AegisTwin-Vision</h1>
+          <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">ENTERPRISE v4.2</span>
+        </div>
+        <p class="text-xs text-gray-400 font-mono">Autonomous Digital Twin & Multi-Camera Edge AI Platform</p>
+      </div>
+    </div>
+
+    <!-- Telemetry Status Badges -->
+    <div class="flex flex-wrap items-center gap-3">
+      <div id="sys-status-badge" class="px-3 py-1 rounded-full text-xs font-mono font-semibold border bg-emerald-500/10 text-emerald-400 border-emerald-500/30 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>NOMINAL — SYSTEM ACTIVE</span>
+      </div>
+
+      <div class="h-5 w-px bg-gray-800 hidden sm:block"></div>
+
+      <!-- E-Stop Control -->
+      <button id="estop-btn" class="px-4 py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-semibold text-xs rounded-xl transition shadow-lg shadow-rose-600/20 flex items-center gap-2">
+        <i data-lucide="square" class="w-4 h-4"></i>
+        <span>EMERGENCY E-STOP</span>
+      </button>
+
+      <!-- Profile -->
+      <div class="flex items-center gap-2.5 pl-2 border-l border-gray-800">
+        <div class="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-xs font-bold text-gray-300 font-mono">
+          AA
+        </div>
+        <div class="hidden md:block">
+          <div class="text-xs font-semibold text-gray-200">Arwad Al-Omosh</div>
+          <div class="text-[10px] text-gray-400 font-mono">AI & Robotics Specialist</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Workspace Grid -->
+  <main class="flex-1 p-4 lg:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-[1920px] mx-auto w-full">
+    
+    <!-- COLUMN 1: Multi-Camera Vision Feed & Spatial Tracking (5 Cols) -->
+    <section class="lg:col-span-5 flex flex-col gap-4">
+      <div class="glass-panel rounded-2xl p-5 flex flex-col flex-1 border border-gray-800">
+        
+        <!-- Header & Feed Switcher -->
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-800/80">
+          <div class="flex items-center gap-2">
+            <i data-lucide="video" class="w-4 h-4 text-cyan-400"></i>
+            <h2 class="text-sm font-semibold text-gray-200 uppercase tracking-wider font-mono">Spatial Vision Stream</h2>
+          </div>
+          <div class="flex items-center gap-1 bg-gray-900/90 p-1 rounded-xl border border-gray-800 text-xs font-mono">
+            <button data-cam="cam-1" class="cam-btn px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-medium transition">CAM 01</button>
+            <button data-cam="cam-2" class="cam-btn px-2.5 py-1 rounded-lg text-gray-400 hover:text-white transition">CAM 02</button>
+            <button data-cam="cam-3" class="cam-btn px-2.5 py-1 rounded-lg text-gray-400 hover:text-white transition">CAM 03</button>
+          </div>
+        </div>
+
+        <!-- Vision Feed Canvas Container -->
+        <div class="relative rounded-xl overflow-hidden bg-gray-950 border border-gray-800/80 aspect-video flex items-center justify-center">
+          <canvas id="vision-canvas" width="640" height="360" class="w-full h-full object-cover"></canvas>
+          <div class="scanline-overlay absolute inset-0"></div>
+          
+          <!-- Live Overlay Telemetry Badge -->
+          <div class="absolute top-3 left-3 bg-gray-950/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-gray-800 text-[10px] font-mono text-cyan-400 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>YOLOv8x-POSE // REAL-TIME GEOMETRY</span>
+          </div>
+        </div>
+
+        <!-- Vision Tracking Details Table -->
+        <div class="mt-4 pt-3 border-t border-gray-800/80 space-y-2">
+          <div class="text-xs font-mono font-semibold text-gray-400 uppercase tracking-wider flex items-center justify-between">
+            <span>Detected Entities</span>
+            <span class="text-cyan-400">2 Active Tracks</span>
+          </div>
+          
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="p-2.5 rounded-xl bg-gray-900/60 border border-gray-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span class="text-gray-200 font-semibold">HUMAN_01</span>
+                <span class="text-gray-500">(Operator)</span>
+              </div>
+              <span class="text-emerald-400">Conf: 94.6%</span>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-gray-900/60 border border-gray-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="text-gray-200 font-semibold">AGV_04</span>
+                <span class="text-gray-500">(Transport)</span>
+              </div>
+              <span class="text-emerald-400">Conf: 96.1%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COLUMN 2: Digital Twin 3D/2D Kinematics (4 Cols) -->
+    <section class="lg:col-span-4 flex flex-col gap-4">
+      <div class="glass-panel rounded-2xl p-5 flex flex-col flex-1 border border-gray-800">
+        
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-800/80">
+          <div class="flex items-center gap-2">
+            <i data-lucide="box" class="w-4 h-4 text-indigo-400"></i>
+            <h2 class="text-sm font-semibold text-gray-200 uppercase tracking-wider font-mono">ROS2 Digital Twin Kinematics</h2>
+          </div>
+          <span class="text-xs font-mono text-indigo-400">6-DoF ARM</span>
+        </div>
+
+        <!-- Twin Canvas Visualizer -->
+        <div class="relative rounded-xl overflow-hidden bg-[#070b14] border border-gray-800 aspect-square flex items-center justify-center">
+          <canvas id="twin-canvas" width="400" height="400" class="w-full h-full object-contain"></canvas>
+        </div>
+
+        <!-- Telemetry Joint Data Gauges -->
+        <div class="grid grid-cols-3 gap-2.5 mt-4 pt-3 border-t border-gray-800/80 font-mono text-xs">
+          <div class="p-2.5 rounded-xl bg-gray-900/60 border border-gray-800 text-center">
+            <div class="text-gray-500 text-[10px]">JOINT 01</div>
+            <div id="joint-1-val" class="font-bold text-indigo-400 text-sm mt-0.5">-42.1°</div>
+          </div>
+          <div class="p-2.5 rounded-xl bg-gray-900/60 border border-gray-800 text-center">
+            <div class="text-gray-500 text-[10px]">JOINT 02</div>
+            <div id="joint-2-val" class="font-bold text-cyan-400 text-sm mt-0.5">18.4°</div>
+          </div>
+          <div class="p-2.5 rounded-xl bg-gray-900/60 border border-gray-800 text-center">
+            <div class="text-gray-500 text-[10px]">JOINT 03</div>
+            <div id="joint-3-val" class="font-bold text-emerald-400 text-sm mt-0.5">-31.0°</div>
+          </div>
+        </div>
+
+        <!-- End Effector Vector -->
+        <div class="mt-2.5 p-2.5 rounded-xl bg-gray-900/80 border border-gray-800 flex items-center justify-between font-mono text-xs">
+          <span class="text-gray-400">End-Effector XYZ Pose:</span>
+          <span id="ee-pos-val" class="text-rose-400 font-bold">[240, 180, 135]</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COLUMN 3: Performance Telemetry & Risk Log (3 Cols) -->
+    <section class="lg:col-span-3 flex flex-col gap-4">
+      
+      <!-- Metrics Gauges Grid -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="glass-panel p-4 rounded-2xl border border-gray-800 glow-cyan">
+          <div class="text-[10px] font-mono text-gray-400 uppercase">Vision FPS</div>
+          <div id="val-fps" class="text-2xl font-bold font-mono text-cyan-400 mt-1">59.8</div>
+          <div class="text-[10px] text-gray-500 font-mono mt-1">Target: 60.0 FPS</div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-2xl border border-gray-800 glow-indigo">
+          <div class="text-[10px] font-mono text-gray-400 uppercase">Inference Latency</div>
+          <div id="val-lat" class="text-2xl font-bold font-mono text-indigo-400 mt-1">8.4<span class="text-xs font-normal">ms</span></div>
+          <div class="text-[10px] text-gray-500 font-mono mt-1">TensorRT Quantized</div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-2xl border border-gray-800 glow-emerald">
+          <div class="text-[10px] font-mono text-gray-400 uppercase">ROS2 Queue</div>
+          <div id="val-queue" class="text-2xl font-bold font-mono text-emerald-400 mt-1">2</div>
+          <div class="text-[10px] text-gray-500 font-mono mt-1">Zero Packet Drop</div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-2xl border border-gray-800">
+          <div class="text-[10px] font-mono text-gray-400 uppercase">GPU Load</div>
+          <div id="val-cpu" class="text-2xl font-bold font-mono text-purple-400 mt-1">34.2%</div>
+          <div class="text-[10px] text-gray-500 font-mono mt-1">Jetson AGX Orin</div>
+        </div>
+      </div>
+
+      <!-- Live Hazard & Event Log -->
+      <div class="glass-panel rounded-2xl p-4 border border-gray-800 flex-1 flex flex-col">
+        <div class="flex items-center justify-between mb-3 pb-2 border-b border-gray-800">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-rose-400"></i>
+            <h3 class="text-xs font-semibold text-gray-200 uppercase font-mono">System Hazard Log</h3>
+          </div>
+          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+        </div>
+
+        <div class="space-y-2 overflow-y-auto max-h-[300px] font-mono text-[11px] pr-1">
+          <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-300">
+            <div class="flex justify-between font-bold">
+              <span>[10:14:02] GEO-FENCE WARN</span>
+              <span>DIST: 1.4m</span>
+            </div>
+            <div class="text-[10px] text-rose-400/80 mt-0.5">Operator HUMAN_01 approaching Cell A perimeter.</div>
+          </div>
+
+          <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
+            <div class="flex justify-between font-bold">
+              <span>[10:13:45] ROS2 SYNC OK</span>
+              <span>NODE: /twin_node</span>
+            </div>
+            <div class="text-[10px] text-emerald-400/80 mt-0.5">Joint state publisher synchronized at 100Hz.</div>
+          </div>
+
+          <div class="p-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">
+            <div class="flex justify-between font-bold">
+              <span>[10:12:10] MODEL LOADED</span>
+              <span>FP16 TensorRT</span>
+            </div>
+            <div class="text-[10px] text-indigo-400/80 mt-0.5">YOLOv8x-Pose pipeline initialized.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer Info -->
+  <footer class="border-t border-gray-800/80 bg-[#080c14] px-6 py-3 text-center text-xs font-mono text-gray-500">
+    AegisTwin-Vision Platform // Developed by Arwad Al-Omosh // Open-Source Industrial AI Architecture
+  </footer>
+
+  <!-- Dashboard Script -->
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
