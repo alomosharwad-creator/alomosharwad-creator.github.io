@@ -43,6 +43,7 @@
                 <a href="#projects" class="hover:text-black transition">Projects</a>
                 <a href="#skills" class="hover:text-black transition">Technical Stack</a>
                 <a href="#experience" class="hover:text-black transition">Engineering Experience</a>
+                <a href="#credentials" class="hover:text-black transition">Verified Credentials (23)</a>
                 <a href="#impact" class="hover:text-black transition">Leadership & Humanitarian</a>
                 <a href="#contact" class="hover:text-black transition">Contact</a>
             </nav>
@@ -354,6 +355,693 @@
 
             </div>
         </section>
+
+        
+        <!-- Certifications & Verified Credentials Section -->
+        <section id="credentials" class="mb-24 scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-gray-100 gap-4">
+                <div>
+                    <h2 class="serif-title text-3xl font-normal text-gray-950 mb-2">Verified Credentials & Badges</h2>
+                    <p class="text-gray-500 text-sm">Official commendations, IEEE leadership appointments, technical certifications, and civic honors.</p>
+                </div>
+                <!-- Filter Pills -->
+                <div class="flex flex-wrap items-center gap-2 text-xs font-medium">
+                    <button onclick="filterCredentials('all')" class="cred-filter-btn active bg-gray-900 text-white px-3.5 py-1.5 rounded-full transition" data-filter="all">All (23)</button>
+                    <button onclick="filterCredentials('ieee')" class="cred-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-gray-400 px-3.5 py-1.5 rounded-full transition" data-filter="ieee">IEEE & Leadership</button>
+                    <button onclick="filterCredentials('technical')" class="cred-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-gray-400 px-3.5 py-1.5 rounded-full transition" data-filter="technical">AI & Technical</button>
+                    <button onclick="filterCredentials('humanitarian')" class="cred-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-gray-400 px-3.5 py-1.5 rounded-full transition" data-filter="humanitarian">Humanitarian & Civic</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="credentials-grid">
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0673.jpg', 'IEEE Official Commendation & Leadership Award', 'IEEE Jordan Section')">
+                            <img src="assets/certificates/IMG_0673.jpg" alt="IEEE Official Commendation & Leadership Award" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-blue-50 text-blue-700 border-blue-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-01</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">IEEE Official Commendation & Leadership Award</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">IEEE Jordan Section</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Official commendation from IEEE Jordan Section for outstanding student leadership and organizing national engineering events.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0673.jpg', 'IEEE Official Commendation & Leadership Award', 'IEEE Jordan Section')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0674.jpg', 'IEEE AESS Vice Chair & Event Coordinator Appointment', 'IEEE Aerospace & Electronic Systems Society')">
+                            <img src="assets/certificates/IMG_0674.jpg" alt="IEEE AESS Vice Chair & Event Coordinator Appointment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-blue-50 text-blue-700 border-blue-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-02</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">IEEE AESS Vice Chair & Event Coordinator Appointment</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">IEEE Aerospace & Electronic Systems Society</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Executive appointment certificate as Vice Chair and General Events Coordinator for IEEE AESS Student Branch.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0674.jpg', 'IEEE AESS Vice Chair & Event Coordinator Appointment', 'IEEE Aerospace & Electronic Systems Society')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0675.jpg', 'Google Developer Groups (GDG) PR & Media Lead Certificate', 'Google Developer Groups')">
+                            <img src="assets/certificates/IMG_0675.jpg" alt="Google Developer Groups (GDG) PR & Media Lead Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-amber-50 text-amber-700 border-amber-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-03</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Google Developer Groups (GDG) PR & Media Lead Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Google Developer Groups</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Recognizing strategic media outreach and hackathon management for regional developer communities.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0675.jpg', 'Google Developer Groups (GDG) PR & Media Lead Certificate', 'Google Developer Groups')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="humanitarian">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0676.jpg', 'Humanitarian Educator — Educational Relief Initiative for Gaza', 'Gaza Educational Relief Project')">
+                            <img src="assets/certificates/IMG_0676.jpg" alt="Humanitarian Educator — Educational Relief Initiative for Gaza" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-rose-50 text-rose-700 border-rose-100">
+                                Humanitarian & Civic
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-04</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Humanitarian Educator — Educational Relief Initiative for Gaza</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Gaza Educational Relief Project</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Volunteer mentorship delivering advanced STEM, mathematics, and physics education to high-school students facing critical disruptions in Gaza.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0676.jpg', 'Humanitarian Educator — Educational Relief Initiative for Gaza', 'Gaza Educational Relief Project')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="humanitarian">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0677.jpg', 'National Civic Service Ambassador — 'Nahno' Platform', 'Crown Prince Foundation & Naua Initiative')">
+                            <img src="assets/certificates/IMG_0677.jpg" alt="National Civic Service Ambassador — 'Nahno' Platform" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-emerald-50 text-emerald-700 border-emerald-100">
+                                Humanitarian & Civic
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-05</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">National Civic Service Ambassador — 'Nahno' Platform</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Crown Prince Foundation & Naua Initiative</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Certificate of civic engagement and environmental stewardship ambassador across Jordan's national youth platform.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0677.jpg', 'National Civic Service Ambassador — 'Nahno' Platform', 'Crown Prince Foundation & Naua Initiative')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="humanitarian">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0678.jpg', 'Technical Lead & Environmental Pioneer — 'Arwad' Initiative', 'Sustainable Agriculture & Eco-Tech Project')">
+                            <img src="assets/certificates/IMG_0678.jpg" alt="Technical Lead & Environmental Pioneer — 'Arwad' Initiative" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-teal-50 text-teal-700 border-teal-100">
+                                Humanitarian & Civic
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-06</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Technical Lead & Environmental Pioneer — 'Arwad' Initiative</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Sustainable Agriculture & Eco-Tech Project</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Leadership certificate for advancing IoT precision agriculture, soil monitoring, and eco-sustainability awareness.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0678.jpg', 'Technical Lead & Environmental Pioneer — 'Arwad' Initiative', 'Sustainable Agriculture & Eco-Tech Project')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="humanitarian">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0679.jpg', 'Youth STEM & Robotics Mentor — Orphan Care Centers', 'Community Youth Empowerment Initiative')">
+                            <img src="assets/certificates/IMG_0679.jpg" alt="Youth STEM & Robotics Mentor — Orphan Care Centers" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-violet-50 text-violet-700 border-violet-100">
+                                Humanitarian & Civic
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-07</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Youth STEM & Robotics Mentor — Orphan Care Centers</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Community Youth Empowerment Initiative</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Dedicated mentorship conducting hands-on robotics workshops, programming, and algorithmic games for orphaned youth.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0679.jpg', 'Youth STEM & Robotics Mentor — Orphan Care Centers', 'Community Youth Empowerment Initiative')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0680.jpg', 'AI & Computer Vision Engineering Internship Certificate', 'Shashai for Artificial Intelligence')">
+                            <img src="assets/certificates/IMG_0680.jpg" alt="AI & Computer Vision Engineering Internship Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-indigo-50 text-indigo-700 border-indigo-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-08</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">AI & Computer Vision Engineering Internship Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Shashai for Artificial Intelligence</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Engineering certificate for developing edge deep learning vision inference pipelines and automated dataset ingestion.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0680.jpg', 'AI & Computer Vision Engineering Internship Certificate', 'Shashai for Artificial Intelligence')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0681.jpg', 'Software & Machine Learning Solutions Internship Certificate', 'Nibras Technologies')">
+                            <img src="assets/certificates/IMG_0681.jpg" alt="Software & Machine Learning Solutions Internship Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-purple-50 text-purple-700 border-purple-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-09</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Software & Machine Learning Solutions Internship Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Nibras Technologies</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Backend microservices architecture, clean RESTful API integration, and machine learning pipeline development.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0681.jpg', 'Software & Machine Learning Solutions Internship Certificate', 'Nibras Technologies')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0682.jpg', 'Applied Machine Learning Course & Capstone Instructor Certificate', 'Senior Engineering Graduate Mentorship')">
+                            <img src="assets/certificates/IMG_0682.jpg" alt="Applied Machine Learning Course & Capstone Instructor Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-indigo-50 text-indigo-700 border-indigo-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-10</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Applied Machine Learning Course & Capstone Instructor Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Senior Engineering Graduate Mentorship</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Recognizing applied instruction of PyTorch, OpenCV, and Deep Neural Networks for graduating senior engineers.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0682.jpg', 'Applied Machine Learning Course & Capstone Instructor Certificate', 'Senior Engineering Graduate Mentorship')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0683.jpg', 'Autonomous Robotics Coach & Practical Lab Instructor', 'Al-Balqa Applied University')">
+                            <img src="assets/certificates/IMG_0683.jpg" alt="Autonomous Robotics Coach & Practical Lab Instructor" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-amber-50 text-amber-700 border-amber-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-11</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Autonomous Robotics Coach & Practical Lab Instructor</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Al-Balqa Applied University</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Instructing ROS, SLAM-based LiDAR navigation, and coaching robotics teams to national competitive podium rankings.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0683.jpg', 'Autonomous Robotics Coach & Practical Lab Instructor', 'Al-Balqa Applied University')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0684.jpg', 'TEDx Amman Logistics & Event Leadership Certificate', 'TEDx Amman Organization')">
+                            <img src="assets/certificates/IMG_0684.jpg" alt="TEDx Amman Logistics & Event Leadership Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-rose-50 text-rose-700 border-rose-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-12</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">TEDx Amman Logistics & Event Leadership Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">TEDx Amman Organization</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Managing high-capacity event logistics, speaker operations, and technical stage execution.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0684.jpg', 'TEDx Amman Logistics & Event Leadership Certificate', 'TEDx Amman Organization')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0685.jpg', 'National Engineering Robotics Hackathon Organizer', 'IEEE Robotics & Automation Chapter')">
+                            <img src="assets/certificates/IMG_0685.jpg" alt="National Engineering Robotics Hackathon Organizer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-blue-50 text-blue-700 border-blue-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-13</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">National Engineering Robotics Hackathon Organizer</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">IEEE Robotics & Automation Chapter</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Directing competitive tracks, hardware obstacle challenges, and technical evaluation panels.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0685.jpg', 'National Engineering Robotics Hackathon Organizer', 'IEEE Robotics & Automation Chapter')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0686.jpg', 'IEEE Student Member Outstanding Activity Certificate', 'IEEE Student Branch Al-Balqa')">
+                            <img src="assets/certificates/IMG_0686.jpg" alt="IEEE Student Member Outstanding Activity Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-blue-50 text-blue-700 border-blue-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-14</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">IEEE Student Member Outstanding Activity Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">IEEE Student Branch Al-Balqa</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Honoring continuous active contribution, technical workshops, and chapter coordination.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0686.jpg', 'IEEE Student Member Outstanding Activity Certificate', 'IEEE Student Branch Al-Balqa')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0687.jpg', 'Deep Learning Specialization & Computer Vision Workshop', 'AI Research Academy')">
+                            <img src="assets/certificates/IMG_0687.jpg" alt="Deep Learning Specialization & Computer Vision Workshop" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-indigo-50 text-indigo-700 border-indigo-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-15</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Deep Learning Specialization & Computer Vision Workshop</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">AI Research Academy</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Advanced training in Convolutional Neural Networks, YOLO object detection, and feature maps.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0687.jpg', 'Deep Learning Specialization & Computer Vision Workshop', 'AI Research Academy')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0688.jpg', 'Autonomous Mobile Robotics & ROS Systems Training', 'Robotics & Innovation Center')">
+                            <img src="assets/certificates/IMG_0688.jpg" alt="Autonomous Mobile Robotics & ROS Systems Training" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-emerald-50 text-emerald-700 border-emerald-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-16</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Autonomous Mobile Robotics & ROS Systems Training</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Robotics & Innovation Center</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Hands-on mastery of Robot Operating System (ROS 2), TF transforms, and Nav2 stack configuration.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0688.jpg', 'Autonomous Mobile Robotics & ROS Systems Training', 'Robotics & Innovation Center')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0689.jpg', 'IEEE Executive Committee Leadership Honor', 'IEEE Jordan Section')">
+                            <img src="assets/certificates/IMG_0689.jpg" alt="IEEE Executive Committee Leadership Honor" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-blue-50 text-blue-700 border-blue-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-17</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">IEEE Executive Committee Leadership Honor</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">IEEE Jordan Section</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Executive recognition for managing student branch operations and university technical activities.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0689.jpg', 'IEEE Executive Committee Leadership Honor', 'IEEE Jordan Section')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="humanitarian">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0690.jpg', 'Community STEM Outreach & Youth Empowerment Certificate', 'National Youth Initiative')">
+                            <img src="assets/certificates/IMG_0690.jpg" alt="Community STEM Outreach & Youth Empowerment Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-purple-50 text-purple-700 border-purple-100">
+                                Humanitarian & Civic
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-18</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Community STEM Outreach & Youth Empowerment Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">National Youth Initiative</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Promoting digital literacy, algorithmic problem solving, and technological inclusion for underserved youth.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0690.jpg', 'Community STEM Outreach & Youth Empowerment Certificate', 'National Youth Initiative')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="humanitarian">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0691.jpg', 'Sustainable Eco-Tech & IoT Smart Agriculture Honor', 'Jordanian Environmental Society')">
+                            <img src="assets/certificates/IMG_0691.jpg" alt="Sustainable Eco-Tech & IoT Smart Agriculture Honor" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-teal-50 text-teal-700 border-teal-100">
+                                Humanitarian & Civic
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-19</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Sustainable Eco-Tech & IoT Smart Agriculture Honor</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Jordanian Environmental Society</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Honoring innovative applications of technology for environmental conservation and water/soil monitoring.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0691.jpg', 'Sustainable Eco-Tech & IoT Smart Agriculture Honor', 'Jordanian Environmental Society')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0692.jpg', 'IEEE Women in Engineering (WIE) Technical Outreach Lead', 'IEEE WIE Affinity Group')">
+                            <img src="assets/certificates/IMG_0692.jpg" alt="IEEE Women in Engineering (WIE) Technical Outreach Lead" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-rose-50 text-rose-700 border-rose-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-20</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">IEEE Women in Engineering (WIE) Technical Outreach Lead</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">IEEE WIE Affinity Group</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Fostering female leadership in STEM, organizing technical coding bootcamps and career mentorship.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0692.jpg', 'IEEE Women in Engineering (WIE) Technical Outreach Lead', 'IEEE WIE Affinity Group')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0693.jpg', 'Computer Vision & Edge Computing Masterclass Certificate', 'Edge AI Technology Forum')">
+                            <img src="assets/certificates/IMG_0693.jpg" alt="Computer Vision & Edge Computing Masterclass Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-indigo-50 text-indigo-700 border-indigo-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-21</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Computer Vision & Edge Computing Masterclass Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Edge AI Technology Forum</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Optimizing neural network weights, INT8 quantization, and TensorRT deployment for embedded vision.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0693.jpg', 'Computer Vision & Edge Computing Masterclass Certificate', 'Edge AI Technology Forum')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="technical">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0694.jpg', 'Academic Excellence & Graduation Thesis Commendation', 'Department of AI & Robotics, BAU')">
+                            <img src="assets/certificates/IMG_0694.jpg" alt="Academic Excellence & Graduation Thesis Commendation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-amber-50 text-amber-700 border-amber-100">
+                                AI & Technical
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-22</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">Academic Excellence & Graduation Thesis Commendation</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">Department of AI & Robotics, BAU</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Commendation for B.Sc. graduation project on Autonomous Mobile Fire-Fighting Robot with LiDAR SLAM.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0694.jpg', 'Academic Excellence & Graduation Thesis Commendation', 'Department of AI & Robotics, BAU')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="soft-card rounded-2xl p-5 flex flex-col justify-between group cred-card" data-category="ieee">
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl bg-gray-100 mb-4 h-48 flex items-center justify-center cursor-pointer" onclick="openCredentialModal('assets/certificates/IMG_0695.jpg', 'General Event Director & Project Management Certificate', 'National Tech Summit')">
+                            <img src="assets/certificates/IMG_0695.jpg" alt="General Event Director & Project Management Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                                <i data-lucide="maximize-2" class="w-4 h-4"></i> Expand Credential
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full border bg-blue-50 text-blue-700 border-blue-100">
+                                IEEE & Leadership
+                            </span>
+                            <span class="text-xs text-gray-400 font-mono">CERT-23</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-gray-900 mb-1 leading-snug group-hover:text-indigo-600 transition">General Event Director & Project Management Certificate</h4>
+                        <p class="text-xs font-mono text-gray-500 mb-3">National Tech Summit</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Comprehensive project planning, budgeting, technical speaker coordination, and venue management.</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal('assets/certificates/IMG_0695.jpg', 'General Event Director & Project Management Certificate', 'National Tech Summit')" class="w-full py-2.5 px-4 rounded-xl border border-gray-200 hover:border-gray-900 bg-white text-gray-900 text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-indigo-600"></i>
+                            <span>View High-Res Document</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Lightbox Modal for Credential Viewer -->
+        <div id="credential-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+            <div class="relative bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl flex flex-col">
+                <div class="p-4 border-b border-gray-100 flex items-center justify-between bg-gray-50">
+                    <div>
+                        <h3 id="modal-title" class="text-base font-semibold text-gray-900">Credential Viewer</h3>
+                        <p id="modal-issuer" class="text-xs text-gray-500 font-mono"></p>
+                    </div>
+                    <button onclick="closeCredentialModal()" class="p-2 text-gray-400 hover:text-gray-900 rounded-full hover:bg-gray-200 transition">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div class="p-6 overflow-y-auto flex items-center justify-center bg-gray-950/90 min-h-[400px]">
+                    <img id="modal-img" src="" alt="Credential" class="max-h-[75vh] w-auto object-contain rounded-lg shadow-md">
+                </div>
+                <div class="p-4 border-t border-gray-100 bg-gray-50 flex items-center justify-between text-xs text-gray-500">
+                    <span class="font-mono">VERIFIED DOCUMENT // OFFICIAL RECORD</span>
+                    <button onclick="closeCredentialModal()" class="px-4 py-2 bg-gray-900 text-white font-medium rounded-full hover:bg-black transition">Close Viewer</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function filterCredentials(category) {
+                const cards = document.querySelectorAll('.cred-card');
+                const filterBtns = document.querySelectorAll('.cred-filter-btn');
+
+                filterBtns.forEach(btn => {
+                    if (btn.getAttribute('data-filter') === category) {
+                        btn.classList.add('bg-gray-900', 'text-white');
+                        btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+                    } else {
+                        btn.classList.remove('bg-gray-900', 'text-white');
+                        btn.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+                    }
+                });
+
+                cards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            function openCredentialModal(imgSrc, title, issuer) {
+                document.getElementById('modal-img').src = imgSrc;
+                document.getElementById('modal-title').textContent = title;
+                document.getElementById('modal-issuer').textContent = issuer;
+                document.getElementById('credential-modal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeCredentialModal() {
+                document.getElementById('credential-modal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeCredentialModal();
+                }
+            });
+        </script>
+
 
         <!-- Leadership, Humanitarian & Civic Engagement Section -->
         <section id="impact" class="mb-24 scroll-mt-24">
